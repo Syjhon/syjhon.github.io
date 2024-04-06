@@ -50,7 +50,7 @@
   :root,
   :host :root,
   :host {
-    --md-sys-color-background: #ffff00;
+    --md-sys-color-background: #008000;
     --md-sys-color-on-background: #ede1d3;
     --md-sys-color-surface: #18130b;
     --md-sys-color-surface-dim: #18130b;
