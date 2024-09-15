@@ -368,7 +368,7 @@ blockquote.warning a {
 }
 @media (prefers-color-scheme: dark) {
   .key {
-    background-color: var(--md-sys-color-surface-dim);
+    background-color: var(--md-sys-color-surface-container-high);
   }
 }
 .key:hover {
