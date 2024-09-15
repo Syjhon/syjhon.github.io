@@ -1,1 +1,168 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('e 1w=\'2Y\';e 1v=\'2X\';y q=\'\';y z=0;e Z=5;y 12=0;y M=\'\';D f 1x(L){e 1C=N 2W().2V(L);e 1B=t 2U.2T.2S(\'2R-2Q\',1C);e 1A=2P.2O(N 2N(1B));U 1A.2M(b=>b.2L(16).2K(2,\'0\')).2J(\'\')}D f 18(){2I{e O=t 2H(\'/2G/W/2F.2E\');g(!O.1z)2D N 1y(\'2C O 2B 1t 1z\');M=t O.2A()}1d(u){E.u(\'1y 2z 2y 1u:\',u)}}f 1f(x){X();g(q.V<5){q+=x;13()}}f R(){q=\'\';13()}f 13(){m.I(\'q\').B=\'•\'.2x(q.V)}D f 1e(){e 11=N 2w().2v();e l=m.I(\'1s-L\');g(11-12<2u){l.B=\'2t 2s, 2r 2q 2p 2o A 2n A 2m.\';l.K.J=\'#Y\';U}12=11;e 10=t 1x(q+1w);E.2l(`2k 2j:${10}`);g(10===1v){g(M){2i.2h(\'2g\',\'1p\');19.2f.2e=M.2d()}o{E.u(\'2c 1u 1t 2b\')}}o{z++;g(z>=Z){l.B=\'2a 29 28. 27 a 26 25 24 23.\';l.K.J=\'#Y\';1q();22(()=>{1o();X()},21)}o{l.B=`Có1r A W 20.1Z ${z}A ${Z}.`;l.K.J=\'#Y\'}R()}}f X(){e l=m.I(\'1s-L\');l.B=\'1Y 1X có1r A W\';l.K.J=\'\'}f 1q(){e r=m.S(\'.d\');r.F(d=>d.1n=1p)}f 1o(){e r=m.S(\'.d\');r.F(d=>d.1n=1W);z=0}f 1l(p){1V(y i=p.V-1;i>0;i--){e j=1m.1U(1m.1T()*(i+1));[p[i],p[j]]=[p[j],p[i]]}U p}f 17(){e s=m.I(\'s\');s.H=\'\';e 1k=1l([0,1,2,3,4,5,6,7,8,9]);1k.F((x,1j)=>{g(1j===9){s.H+=`<k w="d"T="n(\'P\')"><G w="1i-1h-1g">1S</G></k>`}s.H+=`<k w="d"T="n(${x})">${x}</k>`});s.H+=`<k w="d"T="n(\'Q\')"><G w="1i-1h-1g">1R</G></k>`;e r=m.S(\'.d\');r.F(d=>{d.15(\'1Q\',1c)})}f n(v){g(1P v===\'1O\'){1f(v)}o g(v===\'P\'){R()}o g(v===\'Q\'){1e().1d(E.u)}}f 1c(h){e k=h.1N;k.1b.1M(\'1a\');1L k.1K;k.1b.1J(\'1a\')}19.1I=D f(){t 18();17()};m.15(\'1H\',f(h){g(h.d>=\'0\'&&h.d<=\'9\'){n(1G(h.d))}o g(h.d===\'1F\'){h.14();n(\'Q\')}o g(h.d===\'1E\'||h.d===\'1D\'){h.14();n(\'P\')}});',62,185,'|||||||||||||key|const|function|if|event|||button|accessMessage|document|handleKeyPress|else|array|password|keys|keypad|await|error|value|class|digit|let|attemptCount|de|textContent||async|console|forEach|span|innerHTML|getElementById|color|style|message|redirectUrl|new|response|clear|check|clearPassword|querySelectorAll|onclick|return|length|acceso|resetAccessMessage|f44336|maxAttempts|hashedInput|currentTime|lastAttemptTime|updatePasswordDisplay|preventDefault|addEventListener||generateKeypad|fetchRedirectUrl|window|ripple|classList|createRipple|catch|checkPassword|addDigit|outlined|symbols|material|index|digits|shuffleArray|Math|disabled|enableKeypad|true|disableKeypad|digo|access|not|URL|hashedPassword|newSalt|sha256|Error|ok|hashArray|hashBuffer|msgBuffer|Delete|Backspace|Enter|parseInt|keydown|onload|add|offsetWidth|void|remove|currentTarget|number|typeof|click|keyboard_tab|backspace|random|floor|for|false|el|Ingrese|Intento|incorrecto|30000|setTimeout|segundos|30|en|intentarlo|Vuelva|fallidos|intentos|Demasiados|set|Redirect|trim|href|location|access_granted|setItem|sessionStorage|calculado|Hash|log|nuevo|intentar|antes|momento|un|espera|favor|Por|2000|getTime|Date|repeat|redirect|fetching|text|was|Network|throw|txt|link|contenido|fetch|try|join|padStart|toString|map|Uint8Array|from|Array|256|SHA|digest|subtle|crypto|encode|TextEncoder|4cf404cf09d824f20ee80702559897782ade6ef45583ab828089136e48fdfe82|SNryzWpD9as38HF2'.split('|'),0,{}))
+const newSalt = 'SNryzWpD9as38HF2';
+const hashedPassword = '4cf404cf09d824f20ee80702559897782ade6ef45583ab828089136e48fdfe82'; 
+
+let password = '';
+let attemptCount = 0;
+const maxAttempts = 5;
+let lastAttemptTime = 0;
+let redirectUrl = '';
+
+// Función para generar un hash SHA-256
+async function sha256(message) {
+    const msgBuffer = new TextEncoder().encode(message);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+async function fetchRedirectUrl() {
+    try {
+        const response = await fetch('/contenido/acceso/link.txt');
+        if (!response.ok) throw new Error('Network response was not ok');
+        redirectUrl = await response.text();
+    } catch (error) {
+        console.error('Error fetching redirect URL:', error);
+    }
+}
+
+function addDigit(digit) {
+    resetAccessMessage();
+    
+    if (password.length < 5) {
+        password += digit;
+        updatePasswordDisplay();
+    }
+}
+
+function clearPassword() {
+    password = '';
+    updatePasswordDisplay();
+}
+
+function updatePasswordDisplay() {
+    document.getElementById('password').textContent = '•'.repeat(password.length);
+}
+
+async function checkPassword() {
+    const currentTime = new Date().getTime();
+    const accessMessage = document.getElementById('access-message');
+
+    if (currentTime - lastAttemptTime < 2000) {
+        accessMessage.textContent = 'Por favor, espera un momento antes de intentar de nuevo.';
+        accessMessage.style.color = '#f44336';
+        return;
+    }
+
+    lastAttemptTime = currentTime;
+
+    const hashedInput = await sha256(password + newSalt);
+
+    console.log(`Hash calculado: ${hashedInput}`); 
+
+    if (hashedInput === hashedPassword) {
+        if (redirectUrl) {
+            sessionStorage.setItem('access_granted', 'true');
+            window.location.href = redirectUrl.trim(); 
+        } else {
+            console.error('Redirect URL not set');
+        }
+    } else {
+        attemptCount++;
+        if (attemptCount >= maxAttempts) {
+            accessMessage.textContent = 'Demasiados intentos fallidos. Vuelva a intentarlo en 30 segundos.';
+            accessMessage.style.color = '#f44336';
+            disableKeypad();
+            setTimeout(() => {
+                enableKeypad();
+                resetAccessMessage();
+            }, 30000);
+        } else {
+            accessMessage.textContent = `Código de acceso incorrecto. Intento ${attemptCount} de ${maxAttempts}.`;
+            accessMessage.style.color = '#f44336';
+        }
+        clearPassword();
+    }
+}
+
+function resetAccessMessage() {
+    const accessMessage = document.getElementById('access-message');
+    accessMessage.textContent = 'Ingrese el código de acceso';
+    accessMessage.style.color = '';
+}
+
+function disableKeypad() {
+    const keys = document.querySelectorAll('.key');
+    keys.forEach(key => key.disabled = true);
+}
+
+function enableKeypad() {
+    const keys = document.querySelectorAll('.key');
+    keys.forEach(key => key.disabled = false);
+    attemptCount = 0;
+}
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+function generateKeypad() {
+    const keypad = document.getElementById('keypad');
+    keypad.innerHTML = '';
+
+    const digits = shuffleArray([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+    
+    digits.forEach((digit, index) => {
+        if (index === 9) {
+            keypad.innerHTML += `<button class="key" onclick="handleKeyPress('clear')"><span class="material-symbols-outlined">backspace</span></button>`;
+        }
+        keypad.innerHTML += `<button class="key" onclick="handleKeyPress(${digit})">${digit}</button>`;
+    });
+
+    keypad.innerHTML += `<button class="key" onclick="handleKeyPress('check')"><span class="material-symbols-outlined">keyboard_tab</span></button>`;
+
+    const keys = document.querySelectorAll('.key');
+    keys.forEach(key => {
+        key.addEventListener('click', createRipple);
+    });
+}
+
+function handleKeyPress(value) {
+    if (typeof value === 'number') {
+        addDigit(value);
+    } else if (value === 'clear') {
+        clearPassword();
+    } else if (value === 'check') {
+        checkPassword().catch(console.error);
+    }
+}
+
+function createRipple(event) {
+    const button = event.currentTarget;
+    button.classList.remove('ripple');
+    void button.offsetWidth; // Trigger reflow
+    button.classList.add('ripple');
+}
+
+// Generar el teclado al cargar la página
+window.onload = async function() {
+    await fetchRedirectUrl();
+    generateKeypad();
+};
+
+// Manejador de eventos para el teclado físico
+document.addEventListener('keydown', function(event) {
+    if (event.key >= '0' && event.key <= '9') {
+        handleKeyPress(parseInt(event.key));
+    } else if (event.key === 'Enter') {
+        event.preventDefault();
+        handleKeyPress('check');
+    } else if (event.key === 'Backspace' || event.key === 'Delete') {
+        event.preventDefault();
+        handleKeyPress('clear');
+    }
+});
+
