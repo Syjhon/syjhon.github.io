@@ -351,12 +351,12 @@ blockquote.warning a {
   margin: 0 auto;
 }
 .key {
-  background-color: var(--md-sys-color-surface-dim);
+  background-color: var(--md-sys-color-surface-container-high);
   border: none;
   font-size: 24px;
   color: var(--md-sys-color-surface-tint);
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -366,25 +366,13 @@ blockquote.warning a {
   outline: none;
   position: relative;
 }
-@media (prefers-color-scheme: dark) {
-  .key {
-    background-color: var(--md-sys-color-surface-container-high); 
-  }
-  .key:hover {
-    background-color: var(--md-sys-color-surface-container-high);
-    opacity: 0.8;
-  }
-  .key:active {
-    background-color: var(--md-sys-color-surface-container-high);
-    opacity: 0.7;
-  }
-}
+
 .key:hover {
-  background-color: var(--md-sys-color-surface-dim);
+  background-color: var(--md-sys-color-surface-container-high);
   opacity: 0.8;
 }
 .key:active {
-  background-color: var(--md-sys-color-surface-dim);
+  background-color: var(--md-sys-color-surface-container-high);
   opacity: 0.7;
 }
 .key:focus {
