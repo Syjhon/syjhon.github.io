@@ -368,7 +368,7 @@ blockquote.warning a {
 }
 @media (prefers-color-scheme: dark) {
   .key {
-    background-color: var(--md-sys-color-inverse-surface); /* Cambia el fondo a negro */
+    background-color: var(--md-sys-color-surface-dim);
   }
 }
 .key:hover {
