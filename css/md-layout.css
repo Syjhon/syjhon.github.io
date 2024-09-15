@@ -385,7 +385,7 @@ blockquote.warning a {
 .key::after {
   content: '';
   position: absolute;
-  background-color: var(--md-sys-color-secondary);
+  background-color: var(--md-sys-color-surface-dim);
   border-radius: 50%;
   width: 50%;
   height: 50%;
