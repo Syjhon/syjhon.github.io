@@ -264,7 +264,12 @@ blockquote.warning a {
 
 #call-to-action {
   overflow: hidden;
-  background: linear-gradient(rgba(29, 200, 205, 0.65), rgba(29, 205, 89, 0.2)), var(--background-image) fixed center center;
+  background: 
+    linear-gradient(
+      color-mix(in srgb, var(--md-sys-color-surface-tint) 65%, transparent),
+      color-mix(in srgb, var(--md-sys-color-surface-tint) 20%, transparent)
+      ), 
+    var(--background-image) fixed center center;
   border-radius: var(--catalog-shape-l);
   background-size: cover;
   height: auto;
@@ -296,8 +301,8 @@ blockquote.warning a {
 }
 
 #call-to-action .cta-btn:hover {
-  background: #1dc8cd;
-  border: 2px solid #1dc8cd;
+  background: var(--md-sys-color-primary-container);
+  border: 2px solid var(--md-sys-color-primary-container);
 }
 
 
