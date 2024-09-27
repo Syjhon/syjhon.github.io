@@ -1,2 +1,168 @@
-const _0x1ee1fd=_0x4dae;(function(_0x57358c,_0x3d2043){const _0x367475=_0x4dae,_0x619110=_0x57358c();while(!![]){try{const _0x286433=-parseInt(_0x367475(0x1cc))/0x1*(-parseInt(_0x367475(0x1f1))/0x2)+-parseInt(_0x367475(0x1e7))/0x3*(-parseInt(_0x367475(0x1e9))/0x4)+-parseInt(_0x367475(0x1e5))/0x5+-parseInt(_0x367475(0x1dd))/0x6+-parseInt(_0x367475(0x1d6))/0x7+-parseInt(_0x367475(0x1ab))/0x8+parseInt(_0x367475(0x1bf))/0x9*(parseInt(_0x367475(0x1ac))/0xa);if(_0x286433===_0x3d2043)break;else _0x619110['push'](_0x619110['shift']());}catch(_0x5017c7){_0x619110['push'](_0x619110['shift']());}}}(_0x18b9,0x44ee3));function _0x4dae(_0x56568e,_0x3fe115){const _0x18b965=_0x18b9();return _0x4dae=function(_0x4daea3,_0xf7dc68){_0x4daea3=_0x4daea3-0x1ab;let _0x4a551f=_0x18b965[_0x4daea3];return _0x4a551f;},_0x4dae(_0x56568e,_0x3fe115);}const newSalt=_0x1ee1fd(0x1ee),hashedPassword=_0x1ee1fd(0x1eb);let password='',attemptCount=0x0;const maxAttempts=0x5;let lastAttemptTime=0x0,redirectUrl='';async function sha256(_0x213e99){const _0x2aa06e=_0x1ee1fd,_0x3b0eb9=new TextEncoder()['encode'](_0x213e99),_0x3b2e6f=await crypto[_0x2aa06e(0x1d1)][_0x2aa06e(0x1da)](_0x2aa06e(0x1c3),_0x3b0eb9),_0x990ae=Array[_0x2aa06e(0x1bc)](new Uint8Array(_0x3b2e6f));return _0x990ae[_0x2aa06e(0x1f3)](_0x103744=>_0x103744[_0x2aa06e(0x1d2)](0x10)[_0x2aa06e(0x1f2)](0x2,'0'))[_0x2aa06e(0x1c7)]('');}async function fetchRedirectUrl(){const _0x46775b=_0x1ee1fd;try{const _0x5aa374=await fetch(_0x46775b(0x1d5));if(!_0x5aa374['ok'])throw new Error(_0x46775b(0x1d7));redirectUrl=await _0x5aa374[_0x46775b(0x1c4)]();}catch(_0x40f830){console[_0x46775b(0x1d3)]('Error\x20fetching\x20redirect\x20URL:',_0x40f830);}}function addDigit(_0x25e884){resetAccessMessage(),password['length']<0x1a&&(password+=_0x25e884,updatePasswordDisplay());}function clearPassword(){password='',updatePasswordDisplay();}function updatePasswordDisplay(){const _0x3e96d6=_0x1ee1fd;document[_0x3e96d6(0x1e0)]('password')[_0x3e96d6(0x1e4)]='•'[_0x3e96d6(0x1b4)](password[_0x3e96d6(0x1de)]);}async function checkPassword(){const _0x358113=_0x1ee1fd,_0x2de2f5=new Date()[_0x358113(0x1db)](),_0x4331f8=document[_0x358113(0x1e0)](_0x358113(0x1ad));if(_0x2de2f5-lastAttemptTime<0x7d0){_0x4331f8[_0x358113(0x1e4)]=_0x358113(0x1ea),_0x4331f8[_0x358113(0x1b0)][_0x358113(0x1b1)]=_0x358113(0x1cb);return;}lastAttemptTime=_0x2de2f5;const _0x411568=await sha256(password+newSalt);console[_0x358113(0x1b6)](_0x358113(0x1f5)+_0x411568),_0x411568===hashedPassword?redirectUrl?(sessionStorage[_0x358113(0x1b3)](_0x358113(0x1cf),_0x358113(0x1e3)),window[_0x358113(0x1b8)][_0x358113(0x1c0)]=redirectUrl[_0x358113(0x1c2)]()):console[_0x358113(0x1d3)](_0x358113(0x1c5)):(attemptCount++,attemptCount>=maxAttempts?(_0x4331f8[_0x358113(0x1e4)]=_0x358113(0x1ae),_0x4331f8[_0x358113(0x1b0)][_0x358113(0x1b1)]=_0x358113(0x1cb),disableKeypad(),setTimeout(()=>{enableKeypad(),resetAccessMessage();},0x7530)):(_0x4331f8[_0x358113(0x1e4)]=_0x358113(0x1c8)+attemptCount+_0x358113(0x1ce)+maxAttempts+'.',_0x4331f8[_0x358113(0x1b0)][_0x358113(0x1b1)]='#f44336'),clearPassword());}function _0x18b9(){const _0x5f35e1=['href','classList','trim','SHA-256','text','Redirect\x20URL\x20not\x20set','disabled','join','Código\x20de\x20acceso\x20incorrecto.\x20Intento\x20','floor','check','#f44336','1gzStmL','querySelectorAll','\x20de\x20','access_granted','add','subtle','toString','error','remove','/contenido/acceso/link.txt','1806007BHXsCP','Network\x20response\x20was\x20not\x20ok','preventDefault','ripple','digest','getTime','click','687036qgtlZg','length','clear','getElementById','forEach','catch','true','textContent','1559995VeSBOS','<button\x20class=\x22key\x22\x20onclick=\x22handleKeyPress(\x27check\x27)\x22><span\x20class=\x22material-symbols-outlined\x22>keyboard_tab</span></button>','129aGYCaJ','.key','39552glkfRk','Por\x20favor,\x20espera\x20un\x20momento\x20antes\x20de\x20intentar\x20de\x20nuevo.','4cf404cf09d824f20ee80702559897782ade6ef45583ab828089136e48fdfe82','currentTarget','<button\x20class=\x22key\x22\x20onclick=\x22handleKeyPress(','SNryzWpD9as38HF2','random','offsetWidth','885302rUvqiQ','padStart','map','Backspace','Hash\x20calculado:\x20','215992UZOkBm','140010KNaTmS','access-message','Demasiados\x20intentos\x20fallidos.\x20Vuelva\x20a\x20intentarlo\x20en\x2030\x20segundos.','keypad','style','color','key','setItem','repeat','number','log','Enter','location','innerHTML','</button>',')\x22>','from','Ingrese\x20el\x20código\x20de\x20acceso','addEventListener','81ccwVxI'];_0x18b9=function(){return _0x5f35e1;};return _0x18b9();}function resetAccessMessage(){const _0x50740b=_0x1ee1fd,_0x593190=document['getElementById'](_0x50740b(0x1ad));_0x593190['textContent']=_0x50740b(0x1bd),_0x593190['style']['color']='';}function disableKeypad(){const _0x1bb128=document['querySelectorAll']('.key');_0x1bb128['forEach'](_0x4e84a1=>_0x4e84a1['disabled']=!![]);}function enableKeypad(){const _0x9c0f82=_0x1ee1fd,_0x2a4390=document[_0x9c0f82(0x1cd)](_0x9c0f82(0x1e8));_0x2a4390[_0x9c0f82(0x1e1)](_0x4b2633=>_0x4b2633[_0x9c0f82(0x1c6)]=![]),attemptCount=0x0;}function shuffleArray(_0x32602b){const _0x2948c1=_0x1ee1fd;for(let _0x40e216=_0x32602b[_0x2948c1(0x1de)]-0x1;_0x40e216>0x0;_0x40e216--){const _0xcaf7d3=Math[_0x2948c1(0x1c9)](Math[_0x2948c1(0x1ef)]()*(_0x40e216+0x1));[_0x32602b[_0x40e216],_0x32602b[_0xcaf7d3]]=[_0x32602b[_0xcaf7d3],_0x32602b[_0x40e216]];}return _0x32602b;}function generateKeypad(){const _0x13f5a7=_0x1ee1fd,_0x37527a=document['getElementById'](_0x13f5a7(0x1af));_0x37527a['innerHTML']='';const _0x272bb2=shuffleArray([0x0,0x1,0x2,0x3,0x4,0x5,0x6,0x7,0x8,0x9]);_0x272bb2['forEach']((_0x1465c5,_0x243e1b)=>{const _0x1c262f=_0x13f5a7;_0x243e1b===0x9&&(_0x37527a['innerHTML']+='<button\x20class=\x22key\x22\x20onclick=\x22handleKeyPress(\x27clear\x27)\x22><span\x20class=\x22material-symbols-outlined\x22>backspace</span></button>'),_0x37527a[_0x1c262f(0x1b9)]+=_0x1c262f(0x1ed)+_0x1465c5+_0x1c262f(0x1bb)+_0x1465c5+_0x1c262f(0x1ba);}),_0x37527a[_0x13f5a7(0x1b9)]+=_0x13f5a7(0x1e6);const _0x9a047e=document[_0x13f5a7(0x1cd)](_0x13f5a7(0x1e8));_0x9a047e[_0x13f5a7(0x1e1)](_0x1a558e=>{const _0x5a9c02=_0x13f5a7;_0x1a558e[_0x5a9c02(0x1be)](_0x5a9c02(0x1dc),createRipple);});}function handleKeyPress(_0x3f9dae){const _0x57ab0c=_0x1ee1fd;if(typeof _0x3f9dae===_0x57ab0c(0x1b5))addDigit(_0x3f9dae);else{if(_0x3f9dae===_0x57ab0c(0x1df))clearPassword();else _0x3f9dae===_0x57ab0c(0x1ca)&&checkPassword()[_0x57ab0c(0x1e2)](console[_0x57ab0c(0x1d3)]);}}function createRipple(_0x3d245b){const _0xa5e055=_0x1ee1fd,_0x2cea61=_0x3d245b[_0xa5e055(0x1ec)];_0x2cea61[_0xa5e055(0x1c1)][_0xa5e055(0x1d4)]('ripple'),void _0x2cea61[_0xa5e055(0x1f0)],_0x2cea61[_0xa5e055(0x1c1)][_0xa5e055(0x1d0)](_0xa5e055(0x1d9));}window['onload']=async function(){await fetchRedirectUrl(),generateKeypad();},document[_0x1ee1fd(0x1be)]('keydown',function(_0x332f41){const _0x3d383a=_0x1ee1fd;if(_0x332f41[_0x3d383a(0x1b2)]>='0'&&_0x332f41['key']<='9')handleKeyPress(parseInt(_0x332f41[_0x3d383a(0x1b2)]));else{if(_0x332f41[_0x3d383a(0x1b2)]===_0x3d383a(0x1b7))_0x332f41['preventDefault'](),handleKeyPress(_0x3d383a(0x1ca));else(_0x332f41[_0x3d383a(0x1b2)]===_0x3d383a(0x1f4)||_0x332f41[_0x3d383a(0x1b2)]==='Delete')&&(_0x332f41[_0x3d383a(0x1d8)](),handleKeyPress(_0x3d383a(0x1df)));}});
+const newSalt = 'SNryzWpD9as38HF2';
+const hashedPassword = '4cf404cf09d824f20ee80702559897782ade6ef45583ab828089136e48fdfe82'; 
+
+let password = '';
+let attemptCount = 0;
+const maxAttempts = 5;
+let lastAttemptTime = 0;
+let redirectUrl = '';
+
+// Función para generar un hash SHA-256
+async function sha256(message) {
+    const msgBuffer = new TextEncoder().encode(message);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+async function fetchRedirectUrl() {
+    try {
+        const response = await fetch('/js/hydration-entrypoints/components/text.js/acceso/link.txt');
+        if (!response.ok) throw new Error('Network response was not ok');
+        redirectUrl = await response.text();
+    } catch (error) {
+        console.error('Error fetching redirect URL:', error);
+    }
+}
+
+function addDigit(digit) {
+    resetAccessMessage();
+    
+    if (password.length < 26) {
+        password += digit;
+        updatePasswordDisplay();
+    }
+}
+
+function clearPassword() {
+    password = '';
+    updatePasswordDisplay();
+}
+
+function updatePasswordDisplay() {
+    document.getElementById('password').textContent = '•'.repeat(password.length);
+}
+
+async function checkPassword() {
+    const currentTime = new Date().getTime();
+    const accessMessage = document.getElementById('access-message');
+
+    if (currentTime - lastAttemptTime < 2000) {
+        accessMessage.textContent = 'Por favor, espera un momento antes de intentar de nuevo.';
+        accessMessage.style.color = '#f44336';
+        return;
+    }
+
+    lastAttemptTime = currentTime;
+
+    const hashedInput = await sha256(password + newSalt);
+
+    console.log(`Hash calculado: ${hashedInput}`); 
+
+    if (hashedInput === hashedPassword) {
+        if (redirectUrl) {
+            sessionStorage.setItem('access_granted', 'true');
+            window.location.href = redirectUrl.trim(); 
+        } else {
+            console.error('Redirect URL not set');
+        }
+    } else {
+        attemptCount++;
+        if (attemptCount >= maxAttempts) {
+            accessMessage.textContent = 'Demasiados intentos fallidos. Vuelva a intentarlo en 30 segundos.';
+            accessMessage.style.color = '#f44336';
+            disableKeypad();
+            setTimeout(() => {
+                enableKeypad();
+                resetAccessMessage();
+            }, 30000);
+        } else {
+            accessMessage.textContent = `Código de acceso incorrecto. Intento ${attemptCount} de ${maxAttempts}.`;
+            accessMessage.style.color = '#f44336';
+        }
+        clearPassword();
+    }
+}
+
+function resetAccessMessage() {
+    const accessMessage = document.getElementById('access-message');
+    accessMessage.textContent = 'Ingrese el código de acceso';
+    accessMessage.style.color = '';
+}
+
+function disableKeypad() {
+    const keys = document.querySelectorAll('.key');
+    keys.forEach(key => key.disabled = true);
+}
+
+function enableKeypad() {
+    const keys = document.querySelectorAll('.key');
+    keys.forEach(key => key.disabled = false);
+    attemptCount = 0;
+}
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+function generateKeypad() {
+    const keypad = document.getElementById('keypad');
+    keypad.innerHTML = '';
+
+    const digits = shuffleArray([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+    
+    digits.forEach((digit, index) => {
+        if (index === 9) {
+            keypad.innerHTML += `<button class="key" onclick="handleKeyPress('clear')"><span class="material-symbols-outlined">backspace</span></button>`;
+        }
+        keypad.innerHTML += `<button class="key" onclick="handleKeyPress(${digit})">${digit}</button>`;
+    });
+
+    keypad.innerHTML += `<button class="key" onclick="handleKeyPress('check')"><span class="material-symbols-outlined">keyboard_tab</span></button>`;
+
+    const keys = document.querySelectorAll('.key');
+    keys.forEach(key => {
+        key.addEventListener('click', createRipple);
+    });
+}
+
+function handleKeyPress(value) {
+    if (typeof value === 'number') {
+        addDigit(value);
+    } else if (value === 'clear') {
+        clearPassword();
+    } else if (value === 'check') {
+        checkPassword().catch(console.error);
+    }
+}
+
+function createRipple(event) {
+    const button = event.currentTarget;
+    button.classList.remove('ripple');
+    void button.offsetWidth; // Trigger reflow
+    button.classList.add('ripple');
+}
+
+// Generar el teclado al cargar la página
+window.onload = async function() {
+    await fetchRedirectUrl();
+    generateKeypad();
+};
+
+// Manejador de eventos para el teclado físico
+document.addEventListener('keydown', function(event) {
+    if (event.key >= '0' && event.key <= '9') {
+        handleKeyPress(parseInt(event.key));
+    } else if (event.key === 'Enter') {
+        event.preventDefault();
+        handleKeyPress('check');
+    } else if (event.key === 'Backspace' || event.key === 'Delete') {
+        event.preventDefault();
+        handleKeyPress('clear');
+    }
+});
 
