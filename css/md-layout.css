@@ -779,8 +779,7 @@ carousel-container {
 .eclipse-text {
   position: absolute;
   bottom: 8%;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 5%;
   color: white;
   opacity: 0;
   transition: opacity 1s;
@@ -821,5 +820,3 @@ carousel-container {
 }
 
 }
-
-
