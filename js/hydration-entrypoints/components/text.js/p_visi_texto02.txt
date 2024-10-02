@@ -1,0 +1,1 @@
+Las imagenes contenidas del flujo de tiempos entrelazados es indeterminado
