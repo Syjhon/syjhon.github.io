@@ -821,20 +821,9 @@ carousel-container {
 }
 .eclipse-text {
   position: absolute;
-  bottom: 8%;
-  left: 25%;
+  bottom: 20px;
+  left: 125px;
 }
 }
 
-@media (max-width: 400px) {
-  .moon {
-    width: 25px;
-    height: 25px;
-  }
 
-  .eclipse-text {
-    position: absolute;
-    bottom: 10px;
-    left: 15px;
-  }
-}
