@@ -1,22 +1,22 @@
 const images = [
     {
-        src: "/images/carousel/p_imagen01.jpg",
+        src: "/images/carousel/p_imagen01.webp",
         text: "Nubes con fragmentos revela matices de un tiempo"
     },
     {
-        src: "/images/carousel/p_imagen02.jpg",
+        src: "/images/carousel/p_imagen02.webp",
         text: "Horizontes lejanos con una revelacion en cada giro"
     },
     {
-        src: "/images/carousel/p_imagen03.jpg",
+        src: "/images/carousel/p_imagen03.webp",
         text: "Posibilidades vistas en la linea del horizonte detenido"
     },
     {
-        src: "/images/carousel/p_imagen04.jpg",
+        src: "/images/carousel/p_imagen04.webp",
         text: "Resuena el silencio en cada instante entrelazandose"
     },
     {
-        src: "/images/carousel/p_imagen05.jpg",
+        src: "/images/carousel/p_imagen05.webp",
         text: "Un lienzo en blanco en la mente durante momentos"
     }
 ];
